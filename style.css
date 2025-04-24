@@ -1,0 +1,156 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Special Elite', cursive;
+  background-color: #fdfbf7;
+  overflow-x: hidden;
+  position: relative;
+}
+
+.background-blur {
+  background: url('https://i.pinimg.com/736x/cc/95/0d/cc950d245d18c835f5a3daa676b9c75c.jpg') center center / cover no-repeat;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  filter: blur(8px) brightness(0.6);
+  z-index: -2;
+}
+
+.texture {
+  background-image: url('https://www.transparenttextures.com/patterns/noise.png');
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  opacity: 0.3;
+  z-index: -1;
+}
+
+.collage {
+  padding: 2rem;
+  max-width: 1000px;
+  margin: auto;
+  position: relative;
+}
+
+.polaroid {
+  width: 220px;
+  background: white;
+  padding: 10px;
+  box-shadow: 6px 8px 20px rgba(0,0,0,0.3);
+  position: absolute;
+  font-family: 'Special Elite', cursive;
+  text-align: center;
+  z-index: 1;
+}
+
+.polaroid img {
+  width: 100%;
+  border-radius: 6px;
+}
+
+.caption {
+  margin-top: 10px;
+  font-size: 0.95rem;
+}
+
+.rotate-left {
+  transform: rotate(-10deg);
+  top: 20px;
+  left: 40px;
+}
+
+.rotate-right {
+  transform: rotate(8deg);
+  top: 100px;
+  left: 220px;
+}
+
+.cutout {
+  position: absolute;
+  top: 260px;
+  left: 80px;
+  width: 280px;
+  z-index: 2;
+}
+
+.cutout img {
+  width: 100%;
+  border-radius: 20px;
+  box-shadow: 3px 6px 12px rgba(0,0,0,0.2);
+}
+
+.text-wall {
+  position: absolute;
+  top: 380px;
+  right: 30px;
+  font-size: 1.2rem;
+  color: #888;
+  writing-mode: vertical-lr;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transform: rotate(180deg);
+  opacity: 0.6;
+}
+
+.flower {
+  position: absolute;
+  bottom: 80px;
+  left: 60%;
+  width: 100px;
+  transform: rotate(-20deg);
+  z-index: 3;
+}
+
+.carta {
+  background: #fff0f5;
+  border-left: 6px solid #ff5e9c;
+  padding: 2rem;
+  border-radius: 15px;
+  box-shadow: 3px 6px 15px rgba(0,0,0,0.1);
+  font-size: 1.1rem;
+  line-height: 1.6;
+  max-width: 400px;
+  position: absolute;
+  right: 80px;
+  top: 100px;
+  z-index: 3;
+
+  max-height: 650px; /* Altura máxima visible */
+  overflow-y: auto;  /* Scroll vertical si se excede */
+}
+
+
+.carta h2 {
+  font-family: 'Dancing Script', cursive;
+  font-size: 2rem;
+  color: #ff69b4;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.subtitulo-romantico {
+  font-family: 'Dancing Script', cursive;
+  font-size: 1.6rem;
+  color: #ff5e9c;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+
+
+@media (max-width: 768px) {
+  .carta {
+    position: static;
+    margin-top: 2rem;
+    max-width: 100%;
+    padding: 1.5rem;
+  }
+}
+
+
