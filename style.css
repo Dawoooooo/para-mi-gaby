@@ -141,54 +141,35 @@ body {
   margin-bottom: 1rem;
 }
 
-/* Media Queries para dispositivos móviles */
 @media (max-width: 768px) {
+  .collage {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+  }
+
+  .polaroid,
+  .cutout {
+    position: static;
+    transform: none;
+    margin: 0 auto;
+    width: 80%;
+    max-width: 300px;
+  }
+
+  .text-wall,
+  .flower {
+    display: none;
+  }
+
   .carta {
     position: static;
-    margin-top: 2rem;
-    max-width: 100%;
+    margin: 0 auto;
+    max-width: 90%;
     padding: 1.5rem;
-    margin-right: 0; /* Elimina el margen derecho en dispositivos móviles */
-    top: auto; /* Elimina el posicionamiento absoluto */
-    left: 0; /* Asegura que no se solape con otros elementos */
-  }
-
-  .collage {
-    padding: 1rem; /* Reduce el padding para adaptarse mejor en móvil */
-  }
-
-  .polaroid {
-    width: 180px; /* Ajusta el tamaño de las polaroids */
-    position: relative;
-    margin: 10px 0;
-  }
-
-  .rotate-left, .rotate-right {
-    top: auto; /* Evita que las imágenes se superpongan al cambiar la posición */
-    left: auto;
-    transform: rotate(0deg); /* Evita que las imágenes se giren */
-  }
-
-  .cutout {
-    top: 200px; /* Ajusta la posición para dispositivos pequeños */
-    left: 0;
-    width: 100%;
-  }
-
-  .text-wall {
-    position: relative;
-    transform: rotate(0); /* Ajusta la rotación */
-    top: 0;
-    right: 0;
-    writing-mode: horizontal-tb; /* Cambia la dirección del texto */
-    font-size: 1rem; /* Reduce el tamaño del texto */
-    opacity: 1; /* Aumenta la visibilidad */
-  }
-
-  .flower {
-    bottom: 20px;
-    left: 50%;
-    width: 80px;
-    transform: rotate(0deg); /* Evita que la flor se gire en dispositivos pequeños */
+    box-shadow: none;
+    border-left: 4px solid #ff5e9c;
   }
 }
