@@ -141,16 +141,12 @@ body {
 }
 
 @media (max-width: 768px) {
-  .container {
-    flex-direction: column;
-    align-items: center;
-  }
-
   .collage {
-    width: 100%;
-    height: auto;
+    padding: 2rem;
+    height: 420px;
+    max-width: 100%;
+    margin: 0 auto;
     position: relative;
-    margin-bottom: 2rem;
   }
 
   .polaroid,
@@ -158,32 +154,33 @@ body {
   .rotate-right,
   .cutout {
     position: absolute;
-    max-width: 40vw;
-    transform-origin: center;
+    transform: none;
+    width: 45vw;
   }
 
   .rotate-left {
-    top: 0;
+    top: 10px;
     left: 5%;
     transform: rotate(-8deg);
   }
 
   .rotate-right {
-    top: 0;
+    top: 30px;
     right: 5%;
-    transform: rotate(7deg);
+    transform: rotate(8deg);
   }
 
   .cutout {
-    bottom: -10px;
+    top: 180px;
     left: 25%;
-    transform: rotate(-2deg);
+    width: 50vw;
+    transform: rotate(-3deg);
   }
 
   .carta {
-    position: relative;
-    max-width: 90vw;
-    margin: 0 auto 3rem auto;
+    position: static;
+    margin: 2rem auto 3rem auto;
+    max-width: 90%;
     padding: 1.5rem;
     max-height: none;
     overflow: visible;
