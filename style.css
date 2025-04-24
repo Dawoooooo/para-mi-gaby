@@ -145,11 +145,9 @@ body {
   .collage {
     position: relative;
     padding: 2rem;
-    height: 420px; /* altura del área del collage */
     max-width: 100%;
-    margin: 0 auto;
-    margin-bottom: 2rem; /* 👈 espacio entre collage y carta */
-    z-index: 0;
+    margin: 0 auto 2rem auto; /* Espacio debajo del collage */
+    height: auto; /* 👈 IMPORTANTE: permite que el collage crezca */
   }
 
   .polaroid,
@@ -182,13 +180,12 @@ body {
 
   .carta {
     position: relative;
-    margin-top: 2rem; /* 👈 espacio extra por si acaso */
-    margin-bottom: 2rem;
+    margin: 2rem auto;
     max-width: 90%;
-    max-height: 400px; /* altura máxima visible en móvil */
+    max-height: 400px;
     overflow-y: auto;
     padding: 1.5rem;
-    z-index: 1;
+    z-index: 10; /* por si acaso */
   }
 
   .text-wall,
@@ -196,6 +193,7 @@ body {
     display: none;
   }
 }
+
 
 main {
   display: flex;
