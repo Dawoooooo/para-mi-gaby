@@ -116,13 +116,14 @@ body {
   font-size: 1.1rem;
   line-height: 1.6;
   max-width: 400px;
-  position: absolute;
-  right: 80px;
-  top: 100px;
+  margin: 3rem auto 0 auto;
+  position: relative;
   z-index: 3;
+
   max-height: 650px;
   overflow-y: auto;
 }
+
 
 .carta h2 {
   font-family: 'Dancing Script', cursive;
@@ -194,3 +195,11 @@ body {
     display: none;
   }
 }
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 4rem;
+}
+
