@@ -143,11 +143,13 @@ body {
 
 @media (max-width: 768px) {
   .collage {
-    position: static; /* 💥 que no se superponga, que fluya como bloque normal */
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 2rem;
+    gap: 1rem;
+    position: static;
+    padding: 1rem;
+    height: auto;
     margin-bottom: 2rem;
   }
 
@@ -155,33 +157,21 @@ body {
   .rotate-left,
   .rotate-right,
   .cutout {
-    position: static; /* 💥 sin posición absoluta */
+    position: static;
+    width: 80%;
     transform: none;
-    width: 90vw;
-    margin-bottom: 1rem;
   }
 
-  .rotate-left,
-  .rotate-right,
   .cutout {
-    transform: none !important; /* fuerza que no se roten en móvil */
+    width: 85%;
   }
 
   .carta {
-    position: relative;
-    margin: 0 auto 2rem auto;
-    max-width: 90%;
-    max-height: 400px;
-    overflow-y: auto;
-    padding: 1.5rem;
-    z-index: 1;
-  }
-
-  .text-wall,
-  .flower {
-    display: none;
+    margin-top: 0;
+    max-height: none;
   }
 }
+
 
 
 main {
