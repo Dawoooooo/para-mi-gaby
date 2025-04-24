@@ -32,10 +32,10 @@ body {
 }
 
 .collage {
-  padding: 2rem;
   max-width: 1000px;
   margin: auto;
   position: relative;
+  padding: 2rem;
 }
 
 .polaroid {
@@ -120,9 +120,8 @@ body {
   right: 80px;
   top: 100px;
   z-index: 3;
-
-  max-height: 650px; /* Altura máxima visible */
-  overflow-y: auto;  /* Scroll vertical si se excede */
+  max-height: 650px;
+  overflow-y: auto;
 }
 
 .carta h2 {
@@ -141,35 +140,48 @@ body {
   margin-bottom: 1rem;
 }
 
+/* 🟣 RESPONSIVE: MÓVIL CON DISEÑO SIMILAR A PC */
 @media (max-width: 768px) {
   .collage {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 1rem;
-    padding: 1rem;
+    transform: scale(0.75);
+    transform-origin: top center;
+    height: 100vh;
+    overflow: hidden;
   }
 
   .polaroid,
+  .rotate-left,
+  .rotate-right,
+  .cutout,
+  .carta {
+    position: absolute;
+  }
+
+  .carta {
+    right: 20px;
+    top: 80px;
+    max-width: 90%;
+    padding: 1.2rem;
+  }
+
   .cutout {
-    position: static;
-    transform: none;
-    margin: 0 auto;
-    width: 80%;
-    max-width: 300px;
+    top: 240px;
+    left: 50px;
+    width: 240px;
+  }
+
+  .rotate-left {
+    top: 10px;
+    left: 20px;
+  }
+
+  .rotate-right {
+    top: 80px;
+    left: 180px;
   }
 
   .text-wall,
   .flower {
     display: none;
-  }
-
-  .carta {
-    position: static;
-    margin: 0 auto;
-    max-width: 90%;
-    padding: 1.5rem;
-    box-shadow: none;
-    border-left: 4px solid #ff5e9c;
   }
 }
