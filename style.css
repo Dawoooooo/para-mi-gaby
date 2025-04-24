@@ -141,36 +141,52 @@ body {
 }
 
 @media (max-width: 768px) {
-  .collage {
-    display: flex;
+  .container {
     flex-direction: column;
     align-items: center;
-    padding: 1rem;
-    position: static;
+  }
+
+  .collage {
+    width: 100%;
+    height: auto;
+    position: relative;
+    margin-bottom: 2rem;
   }
 
   .polaroid,
   .rotate-left,
   .rotate-right,
   .cutout {
-    position: static;
-    margin: 1rem auto;
-    transform: none;
+    position: absolute;
+    max-width: 40vw;
+    transform-origin: center;
   }
 
-  .cutout img {
-    border-radius: 10px;
-    width: 90vw;
-    max-width: 300px;
+  .rotate-left {
+    top: 0;
+    left: 5%;
+    transform: rotate(-8deg);
+  }
+
+  .rotate-right {
+    top: 0;
+    right: 5%;
+    transform: rotate(7deg);
+  }
+
+  .cutout {
+    bottom: -10px;
+    left: 25%;
+    transform: rotate(-2deg);
   }
 
   .carta {
-    position: static;
+    position: relative;
     max-width: 90vw;
-    margin-top: 1.5rem;
+    margin: 0 auto 3rem auto;
     padding: 1.5rem;
-    overflow: visible;
     max-height: none;
+    overflow: visible;
   }
 
   .text-wall,
@@ -178,4 +194,3 @@ body {
     display: none;
   }
 }
-
