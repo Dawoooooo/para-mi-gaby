@@ -148,6 +148,8 @@ body {
     height: 420px; /* altura del área del collage */
     max-width: 100%;
     margin: 0 auto;
+    margin-bottom: 2rem; /* 👈 espacio entre collage y carta */
+    z-index: 0;
   }
 
   .polaroid,
@@ -180,9 +182,8 @@ body {
 
   .carta {
     position: relative;
-    top: 0;
-    right: 0;
-    margin: 2rem auto;
+    margin-top: 2rem; /* 👈 espacio extra por si acaso */
+    margin-bottom: 2rem;
     max-width: 90%;
     max-height: 400px; /* altura máxima visible en móvil */
     overflow-y: auto;
@@ -202,4 +203,5 @@ main {
   align-items: center;
   padding-bottom: 4rem;
 }
+
 
