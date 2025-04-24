@@ -153,24 +153,51 @@ body {
     margin-bottom: 2rem;
   }
 
-  .polaroid,
-  .rotate-left,
-  .rotate-right,
-  .cutout {
-    position: static;
+  /* Asegúrate de que las imágenes se dispongan bien */
+  .polaroid {
     width: 80%;
+    position: relative;
     transform: none;
+    margin-bottom: 1rem;
+  }
+
+  .rotate-left,
+  .rotate-right {
+    transform: none;
+    position: relative;
   }
 
   .cutout {
     width: 85%;
+    margin: 1rem 0;
+    position: relative;
   }
 
+  .cutout img {
+    width: 100%;
+    border-radius: 20px;
+    box-shadow: 3px 6px 12px rgba(0, 0, 0, 0.2);
+  }
+
+  /* Asegurar que la carta también se vea bien en móviles */
   .carta {
-    margin-top: 0;
-    max-height: none;
+    margin-top: 1rem;
+    padding: 1rem;
+    width: 90%;
+    max-width: none;
+    box-shadow: none;
+    font-size: 1rem;
+  }
+
+  .carta h2 {
+    font-size: 1.6rem;
+  }
+
+  .subtitulo-romantico {
+    font-size: 1.3rem;
   }
 }
+
 
 
 
