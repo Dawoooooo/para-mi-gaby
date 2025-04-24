@@ -142,11 +142,11 @@ body {
 
 @media (max-width: 768px) {
   .collage {
+    position: relative;
     padding: 2rem;
-    height: 420px;
+    height: 420px; /* altura del área del collage */
     max-width: 100%;
     margin: 0 auto;
-    position: relative;
   }
 
   .polaroid,
@@ -178,12 +178,15 @@ body {
   }
 
   .carta {
-    position: static;
-    margin: 2rem auto 3rem auto;
+    position: relative;
+    top: 0;
+    right: 0;
+    margin: 2rem auto;
     max-width: 90%;
+    max-height: 400px; /* altura máxima visible en móvil */
+    overflow-y: auto;
     padding: 1.5rem;
-    max-height: none;
-    overflow: visible;
+    z-index: 1;
   }
 
   .text-wall,
